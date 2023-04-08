@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Tugas Kelompok Dua</string>
+    <string name="tv_home">Home</string>
+    <string name="tv_name">Nama</string>
+    <string name="tv_username" translatable="false">Username</string>
+    <string name="tv_pass">Kata Sandi</string>
+    <string name="tv_pass2">Ulangi Kata Sandi</string>
+    <string name="tv_register">Daftar</string>
+    <string name="tv_login">Login</string>
+    <string name="tv_sign">Sign In</string>
+    <string name="tv_jdlprofile">Profile</string>
+    <string name="tv_logout">Logout</string>
+    <string name="tv_jdldetail">Detail Film</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

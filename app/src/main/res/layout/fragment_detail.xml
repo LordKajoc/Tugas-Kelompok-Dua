@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/abu"
+    android:orientation="vertical"
+    tools:context=".DetailFragment">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_toolbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/putih"
+        android:layout_centerHorizontal="true"
+        android:elevation="5dp"
+        app:cardCornerRadius="15dp"
+        android:layout_margin="8dp">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/tb_detail"
+            android:layout_width="172dp"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center">
+
+                <TextView
+                    android:id="@+id/tv_judulDetail"
+                    style="@style/textjudul"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginRight="15dp"
+                    android:text="@string/tv_jdldetail" />
+
+            </RelativeLayout>
+        </androidx.appcompat.widget.Toolbar>
+
+    </androidx.cardview.widget.CardView>
+
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:backgroundTint="@color/putih"
+        android:elevation="5dp"
+        app:cardCornerRadius="15dp"
+        android:layout_margin="8dp"
+        android:layout_below="@id/cv_toolbar">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp">
+
+            <ImageView
+                android:id="@+id/iv_filmimage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/ic_launcher_background" />
+
+            <TextView
+                android:id="@+id/tv_namafilm"
+                style="@style/textjudul"
+                android:layout_centerHorizontal="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv_filmimage"
+                android:text="Nama Film" />
+
+            <TextView
+                android:id="@+id/tv_releasfilm"
+                style="@style/textbody"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_namafilm"
+                android:text="Release" />
+
+            <TextView
+                android:id="@+id/tv_ratingfilm"
+                style="@style/textbody"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_releasfilm"
+                android:text="Rating" />
+
+            <TextView
+                android:id="@+id/tv_sinopsisfilm"
+                style="@style/textbody"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_ratingfilm"
+                android:text="Deskripsi Sinopsis" />
+
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/abu"
+    android:orientation="vertical"
+    tools:context=".ProfileFragment">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_toolbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/putih"
+        android:layout_centerHorizontal="true"
+        android:elevation="5dp"
+        app:cardCornerRadius="15dp"
+        android:layout_margin="8dp">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/tb_profile"
+            android:layout_width="172dp"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center">
+
+                <TextView
+                    android:id="@+id/tv_judulDetail"
+                    style="@style/textjudul"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginRight="15dp"
+                    android:text="@string/tv_jdlprofile" />
+
+            </RelativeLayout>
+        </androidx.appcompat.widget.Toolbar>
+
+    </androidx.cardview.widget.CardView>
+
+
+    <TextView
+        android:id="@+id/tv_tampilusername"
+        style="@style/textjudul"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/cv_toolbar"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="54dp"
+        android:text="Tampil Username Disini" />
+
+    <Button
+        android:id="@+id/btn_logout"
+        style="@style/btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:text="@string/tv_logout" />
+
+</RelativeLayout>
