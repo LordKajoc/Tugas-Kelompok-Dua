@@ -7,14 +7,13 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
-import androidx.lifecycle.get
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
-import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.lordkajoc.tugaskelompokdua.AdapterFilm.onItemClick
 import com.lordkajoc.tugaskelompokdua.databinding.FragmentHomeBinding
 
-class HomeFragment : Fragment(), ListAdapterFilm.OnItemClickListener {
+class HomeFragment : Fragment(), ListAdapterFilm.OnItemClickListener, onItemClick {
     private lateinit var binding: FragmentHomeBinding
     private val list = ArrayList<DataFilm>()
     private lateinit var adapterFilm: AdapterFilm
@@ -37,7 +36,7 @@ class HomeFragment : Fragment(), ListAdapterFilm.OnItemClickListener {
 //        binding.rvFilm.layoutManager = GridLayoutManager(context,2)
 //        binding.rvFilm.adapter = adapterFilm
 
-        val adapterFilm1 = AdapterFilm(ArrayList())
+        val adapterFilm1 = AdapterFilm(ArrayList(), this)
         val lm = GridLayoutManager(context,2)
         binding.rvFilm.layoutManager = lm
         binding.rvFilm.adapter = adapterFilm1
@@ -48,6 +47,7 @@ class HomeFragment : Fragment(), ListAdapterFilm.OnItemClickListener {
         filmViewModel.filmList.observe(viewLifecycleOwner, Observer {
             adapterFilm1.setData(it as ArrayList<DataFilm>)
         })
+
 
 
         val imageclick = binding.imageView2
