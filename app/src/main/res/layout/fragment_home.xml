@@ -5,60 +5,48 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/abu"
-    android:orientation="horizontal"
     tools:context=".HomeFragment">
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cv_toolbar"
-        android:layout_width="wrap_content"
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/tb_home"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:backgroundTint="@color/putih"
-        android:layout_centerHorizontal="true"
-        android:elevation="5dp"
-        app:cardCornerRadius="15dp"
-        android:layout_margin="8dp">
+        android:layout_margin="10dp"
+        android:background="@color/putih">
 
-        <androidx.appcompat.widget.Toolbar
-            android:id="@+id/tb_home"
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:background="@color/putih">
+            android:layout_height="match_parent">
 
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/tv_judulhome"
+                style="@style/textjudul"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="6dp"
+                android:layout_marginEnd="0dp"
+                android:layout_weight="1"
+                android:text="@string/tv_home" />
 
-                <TextView
-                    android:id="@+id/tv_judulhome"
-                    style="@style/textjudul"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentTop="true"
-                    android:layout_centerInParent="true"
-                    android:layout_marginTop="6dp"
-                    android:layout_marginEnd="0dp"
-                    android:layout_weight="1"
-                    android:text="@string/tv_home" />
-
-                <ImageView
-                    android:id="@+id/imageView2"
-                    android:layout_width="87dp"
-                    android:layout_height="35dp"
-                    android:layout_alignParentEnd="true"
-                    android:layout_marginLeft="91dp"
-                    android:layout_toRightOf="@id/tv_judulhome"
-                    android:layout_weight="1"
-                    android:src="@drawable/ic_user_profile" />
-            </RelativeLayout>
-        </androidx.appcompat.widget.Toolbar>
-
-    </androidx.cardview.widget.CardView>
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="87dp"
+                android:layout_height="35dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginLeft="91dp"
+                android:layout_toRightOf="@id/tv_judulhome"
+                android:layout_weight="1"
+                android:src="@drawable/ic_user_profile" />
+        </RelativeLayout>
+    </androidx.appcompat.widget.Toolbar>
 
 
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_film"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/cv_toolbar" />
+        android:layout_below="@id/tb_home" />
 
 </RelativeLayout>

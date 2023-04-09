@@ -5,28 +5,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/abu"
-    android:orientation="vertical"
     tools:context=".LoginFragment">
-
-
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cv_toolbar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
-        android:backgroundTint="@color/putih"
-        android:elevation="5dp"
-        app:cardCornerRadius="15dp">
 
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/tb_login"
             android:layout_width="172dp"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_margin="10dp"
+            android:layout_centerHorizontal="true"
             android:background="@color/putih">
 
             <RelativeLayout
@@ -46,14 +32,13 @@
             </RelativeLayout>
         </androidx.appcompat.widget.Toolbar>
 
-    </androidx.cardview.widget.CardView>
 
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/material_username"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/cv_toolbar"
+        android:layout_below="@id/tb_login"
         android:hint="@string/tv_username">
 
         <com.google.android.material.textfield.TextInputEditText

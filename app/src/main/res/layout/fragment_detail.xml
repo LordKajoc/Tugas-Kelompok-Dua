@@ -5,54 +5,43 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/abu"
-    android:orientation="vertical"
     tools:context=".DetailFragment">
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cv_toolbar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:backgroundTint="@color/putih"
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/tb_detail"
+        android:layout_width="172dp"
+        android:background="@color/putih"
         android:layout_centerHorizontal="true"
-        android:elevation="5dp"
-        app:cardCornerRadius="15dp"
-        android:layout_margin="8dp">
+        android:layout_margin="10dp"
+        android:layout_height="wrap_content">
 
-        <androidx.appcompat.widget.Toolbar
-            android:id="@+id/tb_detail"
-            android:layout_width="172dp"
-            android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center">
 
-            <RelativeLayout
+            <TextView
+                android:id="@+id/tv_judulDetail"
+                style="@style/textjudul"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center">
+                android:layout_centerInParent="true"
+                android:layout_marginRight="15dp"
+                android:text="@string/tv_jdldetail" />
 
-                <TextView
-                    android:id="@+id/tv_judulDetail"
-                    style="@style/textjudul"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerInParent="true"
-                    android:layout_marginRight="15dp"
-                    android:text="@string/tv_jdldetail" />
-
-            </RelativeLayout>
-        </androidx.appcompat.widget.Toolbar>
-
-    </androidx.cardview.widget.CardView>
-
+        </RelativeLayout>
+    </androidx.appcompat.widget.Toolbar>
 
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_below="@id/tb_detail"
+        android:layout_margin="8dp"
         android:layout_marginBottom="10dp"
         android:backgroundTint="@color/putih"
         android:elevation="5dp"
-        app:cardCornerRadius="15dp"
-        android:layout_margin="8dp"
-        android:layout_below="@id/cv_toolbar">
+        app:cardCornerRadius="15dp">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -60,43 +49,43 @@
             android:padding="10dp">
 
             <ImageView
-                android:id="@+id/iv_filmimage"
+                android:id="@+id/iv_filmimagedetail"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
                 android:src="@drawable/ic_launcher_background" />
 
             <TextView
-                android:id="@+id/tv_namafilm"
+                android:id="@+id/tv_namafilmdetail"
                 style="@style/textjudul"
-                android:layout_centerHorizontal="true"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/iv_filmimage"
+                android:layout_below="@id/iv_filmimagedetail"
+                android:layout_centerHorizontal="true"
                 android:text="Nama Film" />
 
             <TextView
-                android:id="@+id/tv_releasfilm"
+                android:id="@+id/tv_releasefilmdetail"
                 style="@style/textbody"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/tv_namafilm"
+                android:layout_below="@+id/tv_namafilmdetail"
                 android:text="Release" />
 
             <TextView
-                android:id="@+id/tv_ratingfilm"
+                android:id="@+id/tv_ratingfilmdetail"
                 style="@style/textbody"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/tv_releasfilm"
+                android:layout_below="@+id/tv_releasefilmdetail"
                 android:text="Rating" />
 
             <TextView
-                android:id="@+id/tv_sinopsisfilm"
+                android:id="@+id/tv_sinopsisfilmdetail"
                 style="@style/textbody"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/tv_ratingfilm"
+                android:layout_below="@+id/tv_ratingfilmdetail"
                 android:text="Deskripsi Sinopsis" />
 
 

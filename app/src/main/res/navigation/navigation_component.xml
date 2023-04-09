@@ -24,6 +24,10 @@
         <action
             android:id="@+id/action_homeFragment_to_detailFragment"
             app:destination="@id/detailFragment" />
+        <argument
+            android:name="nama"
+            app:argType="string"
+            android:defaultValue="nama" />
     </fragment>
     <fragment
         android:id="@+id/detailFragment"
