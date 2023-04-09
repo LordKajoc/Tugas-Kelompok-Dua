@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+    <variable
+        name="film"
+        type="com.lordkajoc.tugaskelompokdua.DataFilm" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="10dp"
+        android:backgroundTint="@color/abu"
+        card_view:cardCornerRadius="10dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp">
+
+            <com.google.android.material.imageview.ShapeableImageView                android:id="@+id/iv_filmimage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+
+                app:imageResource="@{film.foto}"
+                />
+
+            <TextView
+                android:id="@+id/tv_namafilm"
+                style="@style/textjudul"
+                android:layout_centerHorizontal="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv_filmimage"
+                android:text="@{film.nama}" />
+
+            <TextView
+                android:id="@+id/tv_releasefilm"
+                style="@style/textbody"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_namafilm"
+                android:text="@{film.release}" />
+
+            <TextView
+                android:id="@+id/tv_ratingfilm"
+                style="@style/textbody"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_releasefilm"
+                android:text="@{film.rating}" />
+
+            <TextView
+                android:id="@+id/tv_sinopsisfilm"
+                style="@style/textbody"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_ratingfilm"
+                android:text="@{film.sinopsis}" />
+
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+</layout>
