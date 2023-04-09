@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import androidx.lifecycle.get
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -16,7 +17,7 @@ import com.lordkajoc.tugaskelompokdua.databinding.FragmentHomeBinding
 class HomeFragment : Fragment(), ListAdapterFilm.OnItemClickListener {
     private lateinit var binding: FragmentHomeBinding
     private val list = ArrayList<DataFilm>()
-    private lateinit var adapterFilm: ListAdapterFilm
+    private lateinit var adapterFilm: AdapterFilm
     private lateinit var filmViewModel : FilmViewModel
     private lateinit var rvFilm :RecyclerView
 
@@ -30,10 +31,23 @@ class HomeFragment : Fragment(), ListAdapterFilm.OnItemClickListener {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        val filmList = getListFilm()
-        adapterFilm = ListAdapterFilm(filmList,this)
-        binding.rvFilm.layoutManager = GridLayoutManager(context,2)
-        binding.rvFilm.adapter = adapterFilm
+
+//        val filmList = getListFilm()
+//        adapterFilm = ListAdapterFilm(filmList,this)
+//        binding.rvFilm.layoutManager = GridLayoutManager(context,2)
+//        binding.rvFilm.adapter = adapterFilm
+
+        val adapterFilm1 = AdapterFilm(ArrayList())
+        val lm = GridLayoutManager(context,2)
+        binding.rvFilm.layoutManager = lm
+        binding.rvFilm.adapter = adapterFilm1
+
+
+        filmViewModel = ViewModelProvider(this).get(FilmViewModel::class.java)
+        filmViewModel.getFilmList()
+        filmViewModel.filmList.observe(viewLifecycleOwner, Observer {
+            adapterFilm1.setData(it as ArrayList<DataFilm>)
+        })
 
 
         val imageclick = binding.imageView2
@@ -42,25 +56,25 @@ class HomeFragment : Fragment(), ListAdapterFilm.OnItemClickListener {
         }
     }
 
-    private fun getListFilm(): ArrayList<DataFilm> {
-        val dataNama = resources.getStringArray(R.array.data_mobil)
-        val dataPreview = resources.getStringArray(R.array.isi_sementara)
-        val dataFoto = resources.obtainTypedArray(R.array.foto_mobil)
-        val dataDeskripsi = resources.getStringArray(R.array.deskrpsi)
-        val dataSinopsis = resources.getStringArray(R.array.data_sinopsis)
-        val listMobil = ArrayList<DataFilm>()
-        for (i in dataNama.indices) {
-            val mobil = DataFilm(
-                dataNama[i],
-                dataPreview[i],
-                dataFoto.getResourceId(i, -1),
-                dataDeskripsi[i],
-                dataSinopsis[i]
-            )
-            listMobil.add(mobil)
-        }
-        return listMobil
-    }
+//    private fun getListFilm(): ArrayList<DataFilm> {
+//        val dataNama = resources.getStringArray(R.array.data_mobil)
+//        val dataPreview = resources.getStringArray(R.array.isi_sementara)
+//        val dataFoto = resources.obtainTypedArray(R.array.foto_mobil)
+//        val dataDeskripsi = resources.getStringArray(R.array.deskrpsi)
+//        val dataSinopsis = resources.getStringArray(R.array.data_sinopsis)
+//        val listMobil = ArrayList<DataFilm>()
+//        for (i in dataNama.indices) {
+//            val mobil = DataFilm(
+//                dataNama[i],
+//                dataPreview[i],
+//                dataFoto.getResourceId(i, -1),
+//                dataDeskripsi[i],
+//                dataSinopsis[i]
+//            )
+//            listMobil.add(mobil)
+//        }
+//        return listMobil
+//    }
 
     override fun onItemClick(nama: String) {
         val itemclick = HomeFragmentDirections.actionHomeFragmentToDetailFragment()

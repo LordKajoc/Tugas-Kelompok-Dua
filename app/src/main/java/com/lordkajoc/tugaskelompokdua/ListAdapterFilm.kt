@@ -10,9 +10,9 @@ import com.lordkajoc.tugaskelompokdua.databinding.CardviewListItemBinding
 
 class ListAdapterFilm(
     private val kumpulanFilm: ArrayList<DataFilm>,
-    private val listener: OnItemClickListener
-) : RecyclerView.Adapter<ListAdapterFilm.ViewHolder>(){
 
+) : RecyclerView.Adapter<ListAdapterFilm.ViewHolder>(){
+    lateinit var listener: OnItemClickListener
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val binding = CardviewListItemBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return ViewHolder(binding.root)
@@ -66,5 +66,8 @@ class ListAdapterFilm(
     interface OnItemClickListener {
         fun onItemClick(nama: String)
         fun onIconClick()
+    }
+    fun setData(list: ArrayList<DataFilm>){
+        this.kumpulanFilm.addAll(list)
     }
 }
