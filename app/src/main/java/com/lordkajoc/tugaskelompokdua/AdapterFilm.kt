@@ -1,11 +1,13 @@
 package com.lordkajoc.tugaskelompokdua
 
+import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.cardview.widget.CardView
+import androidx.navigation.Navigation
 import androidx.recyclerview.widget.RecyclerView
 
 class AdapterFilm(var listFilm: ArrayList<DataFilm>, var listener: onItemClick) :
@@ -33,31 +35,44 @@ class AdapterFilm(var listFilm: ArrayList<DataFilm>, var listener: onItemClick) 
         return listFilm.size
     }
 
-    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-//        var data = listFilm[position]
-//        holder.tvNama.text = data.nama
-//        holder.tvRelease.text = data.release
-//        holder.tvRating.text = data.rating
-//        holder.tvsinopsis.text = data.sinopsis
-//        holder.ivFilm.setImageResource(data.foto)
-//        holder.card.setOnClickListener{
-//            var move =
-        holder.bind(listFilm[position])
+    override fun onBindViewHolder(holder: AdapterFilm.ViewHolder, position: Int) {
+        holder.bindnama(listFilm[position].nama)
+        holder.bindrelease(listFilm[position].release)
+        holder.bindfoto(listFilm[position].foto)
+        holder.bindrating(listFilm[position].rating)
+        holder.bindsinopsis(listFilm[position].sinopsis)
     }
+
+
 
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView),
         View.OnClickListener {
-        private val namaFilm: TextView = itemView.findViewById(R.id.tv_namafilm)
         private val tvNama: TextView = itemView.findViewById(R.id.tv_namafilm)
         private val tvRelease:TextView =itemView.findViewById(R.id.tv_releasefilm)
         private val tvRating:TextView = itemView.findViewById(R.id.tv_ratingfilm)
         private val tvsinopsis:TextView = itemView.findViewById(R.id.tv_sinopsisfilm)
         private val ivFilm:ImageView =itemView.findViewById(R.id.iv_filmimage)
 
-        fun bind(film: DataFilm) {
-            namaFilm.text = film.nama
-            itemView.setOnClickListener(this)
-        }
+
+            fun bindnama(nama: String) {
+                tvNama.text = nama
+                itemView.setOnClickListener(this)
+
+
+            }
+            fun bindrelease(rilis:String) {
+                tvRelease.text = rilis
+            }
+            fun bindfoto(foto: Int) {
+                ivFilm.setImageResource(foto)
+            }
+            fun bindrating(rating:String) {
+                tvRating.text = rating
+            }
+            fun bindsinopsis(sinops:String) {
+                tvsinopsis.text = sinops
+            }
+
 
         override fun onClick(v: View?) {
             val position = absoluteAdapterPosition

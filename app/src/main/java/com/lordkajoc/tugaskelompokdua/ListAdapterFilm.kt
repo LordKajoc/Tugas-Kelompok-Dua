@@ -1,10 +1,12 @@
 package com.lordkajoc.tugaskelompokdua
 
+import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.navigation.Navigation
 import androidx.recyclerview.widget.RecyclerView
 import com.lordkajoc.tugaskelompokdua.databinding.CardviewListItemBinding
 
@@ -40,7 +42,8 @@ class ListAdapterFilm(
 
         fun bindnama(nama: String) {
             tvNama.text = nama
-            itemView.setOnClickListener(this)
+
+
         }
         fun bindrelease(rilis:String) {
             tvRelease.text = rilis
@@ -55,11 +58,16 @@ class ListAdapterFilm(
             tvsinopsis.text = sinops
         }
 
+
+
         override fun onClick(v: View?) {
             val position = absoluteAdapterPosition
             if (position != RecyclerView.NO_POSITION) {
                 listener.onItemClick(kumpulanFilm[position].nama)
             }
+
+
+
         }
     }
 
