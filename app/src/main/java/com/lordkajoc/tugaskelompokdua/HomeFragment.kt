@@ -9,7 +9,6 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
-import androidx.navigation.Navigation
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -56,7 +55,7 @@ class HomeFragment() : Fragment(), AdapterFilm.onItemClickListener {
         })
 
         val getName = arguments?.getString("Name")
-        binding.tvJudulhome.setText(getName)
+
 
         val imageclick = binding.imageView2
         imageclick.setOnClickListener {
@@ -94,14 +93,6 @@ class HomeFragment() : Fragment(), AdapterFilm.onItemClickListener {
     }
 
 
-    companion object CREATOR : Parcelable.Creator<HomeFragment> {
-        override fun createFromParcel(parcel: Parcel): HomeFragment {
-            return HomeFragment(parcel)
-        }
 
-        override fun newArray(size: Int): Array<HomeFragment?> {
-            return arrayOfNulls(size)
-        }
-    }
 
 }

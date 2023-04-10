@@ -1,6 +1,7 @@
 package com.lordkajoc.tugaskelompokdua
 
 
+
 import java.io.Serializable
 
 
@@ -10,4 +11,4 @@ data class DataFilm(
     val release: String,
     val rating: String,
     val sinopsis:String
-)
+): Serializable

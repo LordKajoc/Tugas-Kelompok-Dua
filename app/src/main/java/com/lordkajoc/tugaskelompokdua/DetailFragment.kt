@@ -20,9 +20,17 @@ class DetailFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        nama = DetailFragmentArgs.fromBundle(requireArguments()).nama
+//        nama = DetailFragmentArgs.fromBundle(requireArguments()).nama
 
-//        val getfilm = arguments?.getSerializable("data_news") as DataFilm
-        binding.tvNamafilmdetail.text = nama
+         val getfilm = arguments?.getSerializable("BUNDEL") as DataFilm
+        binding.ivFilmimagedetail.setImageResource(getfilm.foto)
+        binding.tvNamafilmdetail.text = getfilm.nama
+        binding.tvReleasefilmdetail.text = "Release : ${getfilm.release}"
+        binding.tvRatingfilmdetail.text = "Rating : ${getfilm.rating}"
+        binding.tvSinopsisfilmdetail.text = """Sinopsis :
+           ${getfilm.sinopsis} 
+        """.trimIndent()
+//        binding.tvNamafilmdetail.text = nama
+
     }
 }

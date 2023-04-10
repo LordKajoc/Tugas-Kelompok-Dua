@@ -28,6 +28,9 @@
             android:name="nama"
             app:argType="string"
             android:defaultValue="nama" />
+        <argument
+            android:name="listData"
+            app:argType="com.lordkajoc.tugaskelompokdua.DataFilm" />
     </fragment>
     <fragment
         android:id="@+id/detailFragment"
