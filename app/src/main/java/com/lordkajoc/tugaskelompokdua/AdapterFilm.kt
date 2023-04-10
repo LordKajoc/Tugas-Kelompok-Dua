@@ -10,7 +10,7 @@ import androidx.cardview.widget.CardView
 import androidx.navigation.Navigation
 import androidx.recyclerview.widget.RecyclerView
 
-class AdapterFilm(var listFilm: ArrayList<DataFilm>, var listener: onItemClick) :
+class AdapterFilm(var listFilm: ArrayList<DataFilm>, var listener: onItemClickListener) :
     RecyclerView.Adapter<AdapterFilm.ViewHolder>() {
 
 
@@ -36,6 +36,7 @@ class AdapterFilm(var listFilm: ArrayList<DataFilm>, var listener: onItemClick) 
     }
 
     override fun onBindViewHolder(holder: AdapterFilm.ViewHolder, position: Int) {
+        //menggunakan data binding
         holder.bindnama(listFilm[position].nama)
         holder.bindrelease(listFilm[position].release)
         holder.bindfoto(listFilm[position].foto)
@@ -46,6 +47,7 @@ class AdapterFilm(var listFilm: ArrayList<DataFilm>, var listener: onItemClick) 
 
 
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView),
+       //menggunakan data binding disini
         View.OnClickListener {
         private val tvNama: TextView = itemView.findViewById(R.id.tv_namafilm)
         private val tvRelease:TextView =itemView.findViewById(R.id.tv_releasefilm)
@@ -84,7 +86,8 @@ class AdapterFilm(var listFilm: ArrayList<DataFilm>, var listener: onItemClick) 
     fun setData(list: ArrayList<DataFilm>) {
         this.listFilm.addAll(list)
     }
-    interface onItemClick {
-        fun onItemClick(nama: String)
+
+    interface onItemClickListener {
+        fun onItemClick(nama : String)
     }
 }

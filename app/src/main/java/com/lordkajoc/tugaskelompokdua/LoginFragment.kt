@@ -20,9 +20,12 @@ class LoginFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        val btnlogin = binding.btnLogin
-        btnlogin.setOnClickListener {
-            findNavController().navigate(R.id.action_loginFragment_to_homeFragment)
+
+        binding.btnLogin.setOnClickListener {
+            val name = binding.etUsernamelogin.text.toString()
+            val bundle = Bundle()
+            bundle.putString("Name", name)
+            findNavController().navigate(R.id.action_loginFragment_to_homeFragment,bundle)
         }
     }
 }

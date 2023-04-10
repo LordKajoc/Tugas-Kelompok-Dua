@@ -34,14 +34,12 @@
 
 
     <TextView
-        android:id="@+id/tv_tampilusername"
-        style="@style/textjudul"
+        android:id="@+id/tv_TampilUsername"
+        android:textSize="20sp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/tb_profile"
         android:layout_centerInParent="true"
-        android:layout_marginTop="54dp"
-        android:text="Tampil Username Disini" />
+        android:layout_marginTop="100dp" />
 
     <Button
         android:id="@+id/btn_logout"

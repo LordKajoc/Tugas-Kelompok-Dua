@@ -30,6 +30,7 @@
                 android:layout_weight="1"
                 android:text="@string/tv_home" />
 
+
             <ImageView
                 android:id="@+id/imageView2"
                 android:layout_width="87dp"
@@ -39,6 +40,7 @@
                 android:layout_toRightOf="@id/tv_judulhome"
                 android:layout_weight="1"
                 android:src="@drawable/ic_user_profile" />
+
         </RelativeLayout>
     </androidx.appcompat.widget.Toolbar>
 

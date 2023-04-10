@@ -1,6 +1,8 @@
 package com.lordkajoc.tugaskelompokdua
 
 import android.os.Bundle
+import android.os.Parcel
+import android.os.Parcelable
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -11,15 +13,18 @@ import androidx.navigation.Navigation
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.lordkajoc.tugaskelompokdua.AdapterFilm.onItemClick
 import com.lordkajoc.tugaskelompokdua.databinding.FragmentHomeBinding
 
-class HomeFragment : Fragment(), ListAdapterFilm.OnItemClickListener, onItemClick {
+class HomeFragment() : Fragment(), AdapterFilm.onItemClickListener {
     private lateinit var binding: FragmentHomeBinding
     private val list = ArrayList<DataFilm>()
     private lateinit var adapterFilm: AdapterFilm
     private lateinit var filmViewModel : FilmViewModel
     private lateinit var rvFilm :RecyclerView
+
+    constructor(parcel: Parcel) : this() {
+
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -31,6 +36,7 @@ class HomeFragment : Fragment(), ListAdapterFilm.OnItemClickListener, onItemClic
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
 
 //        val filmList = getListFilm()
 //        adapterFilm = ListAdapterFilm(filmList,this)
@@ -49,11 +55,14 @@ class HomeFragment : Fragment(), ListAdapterFilm.OnItemClickListener, onItemClic
             adapterFilm1.setData(it as ArrayList<DataFilm>)
         })
 
-
+        val getName = arguments?.getString("Name")
+        binding.tvJudulhome.setText(getName)
 
         val imageclick = binding.imageView2
         imageclick.setOnClickListener {
-            onIconClick()
+            val bundle = Bundle()
+            bundle.putString("Name", getName)
+            findNavController().navigate(R.id.action_homeFragment_to_profileFragment,bundle)
         }
     }
 
@@ -84,8 +93,15 @@ class HomeFragment : Fragment(), ListAdapterFilm.OnItemClickListener, onItemClic
 
     }
 
-    override fun onIconClick() {
-        findNavController().navigate(R.id.action_homeFragment_to_profileFragment)
+
+    companion object CREATOR : Parcelable.Creator<HomeFragment> {
+        override fun createFromParcel(parcel: Parcel): HomeFragment {
+            return HomeFragment(parcel)
+        }
+
+        override fun newArray(size: Int): Array<HomeFragment?> {
+            return arrayOfNulls(size)
+        }
     }
 
 }

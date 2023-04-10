@@ -20,8 +20,12 @@ class ProfileFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        val nyobapindah = binding.tvTampilusername
-        nyobapindah.setOnClickListener {
+
+        val getName = arguments?.getString("Name")
+        binding.tvTampilUsername.setText(getName)
+
+        val btnLogout = binding.btnLogout
+        btnLogout.setOnClickListener {
             findNavController().navigate(R.id.action_profileFragment_to_loginFragment)
         }
     }
