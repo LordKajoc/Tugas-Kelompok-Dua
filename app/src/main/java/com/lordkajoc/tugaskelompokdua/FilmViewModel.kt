@@ -28,8 +28,12 @@ class FilmViewModel:ViewModel() {
                 "\n" +
                 "Dalam adegan mid-credit, Gargan dipenjara mendekati Toomes di penjara, mengatakan ia telah mendengar bahwa yang terakhir tahu identitas asli Spider-Man, yang Toomes bantah."),
 
-        DataFilm(R.drawable.estilo,"JohnWick 3", " 20 januari 1998",  "4.7", "tentang anjing yang mati"),
-        DataFilm(R.drawable.estilo,"JohnWick 3", " 20 januari 1998",  "4.7", "tentang anjing yang mati"),
+        DataFilm(R.drawable.horor1,"Ivana", " 20 Agustus 2022",  "9,1/10", "IVANNA juga menjadi film horor Indonesia yang populer di bulan Agustus 2022. Film ini juga masih tayang di bioskop dengan kisahnya yang seru. Berangkat dari novel karya Risa Saraswati, IVANNA mengisahkan tentang dendam hantu perempuan Belanda.\n" +
+                "Seorang wanita bernama Ambar memiliki kemampuan melihat Ivanna hingga mendapat teror darinya. Sementara itu hantu Ivanna sendiri diketahui meninggal tidak wajar bahkan tanpa kepala. Ancaman dari hantu Ivanna semakin serius saat ada sejumlah orang meninggal karenanya."),
+        DataFilm(R.drawable.horor2," Pengabdi Setan 2: Communion", "  04 Agustus 2022",  "8,7/10", "Mengangkat genre horor, film yang disutradarai oleh Joko Anwar ini mengisahkan tentang kehidupan Rini, Toni, Bapak, setelah kematian ibu.\n" +
+                "Rini dan keluarganya memutuskan pindah ke rumah susun di Jakarta. Menjalani hari-hari seperti biasa, datanglah saat mencekam ketika keluarga Rini mendapat teror horor di rusun. Saat itu badai tengah melanda Jakarta hingga menyebabkan banjir dan listrik padam. Saat bersamaan penghuni rusun mulai meninggalkan tempat tinggal mereka. Begitu juga dengan Rini yang bertekad untuk pergi sementara.\n" +
+                "\n" +
+                "Namun para penghuni rusun justru mengalami kecelakaan saat berada di lift. Mereka meninggal seketika, namun mayatnya harus disemayamkan sebentar di rusun lantaran tengah banjir. Situasi semakin mencekam ketika Rini dan keluarganya mendapat teror horor dari hantu menyeramkan. Terlebih ia juga penasaran dengan pekerjaan ayahnya yang terkesan misterius."),
         DataFilm(R.drawable.estilo,"JohnWick 3", " 20 januari 1998",  "4.7", "tentang anjing yang mati"),
     )
 
