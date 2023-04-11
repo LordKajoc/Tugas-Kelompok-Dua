@@ -8,8 +8,7 @@ import androidx.fragment.app.Fragment
 import com.lordkajoc.tugaskelompokdua.databinding.FragmentDetailBinding
 
 class DetailFragment : Fragment() {
-    private lateinit var binding:FragmentDetailBinding
-    private lateinit var nama :String
+    private lateinit var binding: FragmentDetailBinding
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -22,12 +21,13 @@ class DetailFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
 
-         val getfilm = arguments?.getSerializable("BUNDEL") as DataFilm
+        val getfilm = arguments?.getSerializable("BUNDEL") as DataFilm
         binding.ivFilmimagedetail.setImageResource(getfilm.foto)
         binding.tvNamafilmdetail.text = getfilm.nama
         binding.tvReleasefilmdetail.text = "Release : ${getfilm.release}"
         binding.tvRatingfilmdetail.text = "Rating : ${getfilm.rating}"
-        binding.tvSinopsisfilmdetail.text = "Sinopsis :${getfilm.sinopsis}"
-
+        binding.tvSinopsisfilmdetail.text = """Sinopsis:
+            ${getfilm.sinopsis}
+        """.trimIndent()
     }
 }
