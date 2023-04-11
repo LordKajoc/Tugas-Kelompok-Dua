@@ -36,7 +36,30 @@ class FilmViewModel:ViewModel() {
                 "Namun para penghuni rusun justru mengalami kecelakaan saat berada di lift. Mereka meninggal seketika, namun mayatnya harus disemayamkan sebentar di rusun lantaran tengah banjir. Situasi semakin mencekam ketika Rini dan keluarganya mendapat teror horor dari hantu menyeramkan. Terlebih ia juga penasaran dengan pekerjaan ayahnya yang terkesan misterius."),
         DataFilm(R.drawable.mariobos,"The Super Mario Bros. Movie", "20 Februari 2023",  "4.7", "Kisah Mario (Chris Pratt) si tukang ledeng yang melakukan perjalanan heroik untuk menyelamatkan saudaranya, Luigi (Charlie Day). Di perjalanan, Mario tidak sendiri, ia dibantu oleh Putri Peach (Anya Taylor-Joy) dan prajurit kerajaan jamur."),
         DataFilm(R.drawable.temantidur, "Teman Tidur", "10 Januari 2023", "4.5", "Amanda merupakan siswi pindahan, ia tinggal di asrama agar bisa fokus mengikuti olimpiade biologi. Disana ia bertemu dengan Adam dan gengnya, sahabat baru yang membantunya dari siksaan geng siswa bully. Kedekatan Amanda dan Geng Adam memicu reaksi sinis dari Davin yang merupakan siswa unggulan. Davin masih tertekan atas kepergian sahabatnya, Kelly yang bunuh diri karena video erotisnya yang viral, ia mencurigai Geng Adam sebagai penyebar video tersebut. Perlahan, sosok arwah Kelly datang menghantui mereka melalui terror chat video, meminta keadilan atas misteri kematiannya."),
-        DataFilm(R.drawable.tulah, "Tulah", "01 Januari 2023", "4.4","Gilang (21 thn) memutuskan untuk berlibur bersama Sarah dan Kevin, dua orang sahabatnya sejak SMA untuk merayakan ulang tahunnya. Rencana tersebut terganggu dengan kehadiran dua orang tamu tak diundang, suasana semakin tidak menyenangkan ketika mereka mulai memasuki sebuah hutan, Dimulai dengan penampakan sosok kakek misterius dengan seorang anak kecil yang menyeramkan. Rentetan teror yang tidak terduga mulai terjadi dan mengganggu mereka yang membuat Gilang harus terpisah dengan teman-temannya dan menggiring Gilang ke sebuah kutukan masa lalu yang sangat mengerikan. Apakah Gilang dan teman-temannya sanggup bertahan dan mampu melewati kejadian-kejadian aneh dan teror-teror yang mulai mengancam nyawa mereka?")
+        DataFilm(R.drawable.tulah, "Tulah", "01 Januari 2023", "4.4","Gilang (21 thn) memutuskan untuk berlibur bersama Sarah dan Kevin, dua orang sahabatnya sejak SMA untuk merayakan ulang tahunnya. Rencana tersebut terganggu dengan kehadiran dua orang tamu tak diundang, suasana semakin tidak menyenangkan ketika mereka mulai memasuki sebuah hutan, Dimulai dengan penampakan sosok kakek misterius dengan seorang anak kecil yang menyeramkan. Rentetan teror yang tidak terduga mulai terjadi dan mengganggu mereka yang membuat Gilang harus terpisah dengan teman-temannya dan menggiring Gilang ke sebuah kutukan masa lalu yang sangat mengerikan. Apakah Gilang dan teman-temannya sanggup bertahan dan mampu melewati kejadian-kejadian aneh dan teror-teror yang mulai mengancam nyawa mereka?"),
+        DataFilm(R.drawable.baby, "Baby Driver", "11 Maret 2017", "4.5", "Miles adalah seorang pemuda yang dikerap dipanggil dengan nama Baby. Ia memiliki gejala tinitus di telinganya, maka dari itu Baby sering menggunakan earphone sembari mendengarkan musik lewat ipod yang dimilikinya.\n" +
+                "\n" +
+                "Baby sendiri bekerja sebagai seorang pengemudi mobil untuk kelompok kriminal dan perampok yang diorganisir oleh dalang penjahat berjuluk ‘Doc.’ Baby terpaksa melakukan hal itu untuk melunasi hutang kepada Doc karena telah mencuri salah satu mobil miliknya.\n" +
+                "\n" +
+                "Di sela-sela waktunya, Baby pun merawat ayah angkatnya, yang kebetulan seorang penderita tuna rungu bernama Joseph. Selain itu ia pun memiliki pacar bernama Debora, yang bekerja sebagai pelayan di sebuah restoran.\n" +
+                "\n" +
+                "Di suatu hari, perampokan yang dilakukan oleh kelompok Doc tidak berjalan lancar. Seorang pemburu bayaran mengejar Baby, dan mereka. Keadaan juga semakin rumit karena polisi juga ikut dalam aksi pengejaran tersebut.\n" +
+                "\n" +
+                "Walaupun begitu, Baby berhasil lolos dari kejaran semuanya. Sejak kejadian itu, Baby mulai melunasi hutangnya kepada Doc, lalu berhenti dari dunia kriminal dan perampokan.\n" +
+                "\n" ),
+        DataFilm(R.drawable.spirited, "Spirited Away", "20 Juli 2001", "4.7", "Seorang gadis berusia 10 tahun Chihiro (Hiiragi Rumi) dan orang tuanya sedang diperjalanan menuju ke rumah baru mereka. Ayahnya yang memiliki kebiasaan mengambil jalan pintas malah membuat mereka tersesat dan tiba di depan sebuah terowongan yang misterius.\n" +
+                "\n" +
+                "Ayah dan ibunya turun dari mobil dan berjalan pergi menuju ke terowongan misterius tersebut. Chihiro yang tadinya tidak akan mengikuti orang tuanya yang pergi menuju terowongan itu akhirnya ikut pergi karena takut.\n" +
+                "\n" +
+                "Tapi ketika sampai di ujung terowongan, tampak sebuah desa yang tak berpenghuni namun ayahnya mencium aroma makanan di desa tersebut.\n" +
+                "\n" +
+                "Lalu mereka mengikuti arah aroma makanan itu. Dan sampailah mereka di sebuah kedai makanan tapi tidak terlihat pemilik kedai tersebut.\n" +
+                "\n" +
+                "Sementara ayah dan ibunya makan makanan yang tersedia di kedai itu, Chihiro pergi sendiri berkeliling di desa itu dan sampailah ia di sebuah pemandian air panas dan berjumpa dengan Haku (Irino Miyu) seorang anak laki-laki.\n" +
+                "\n" +
+                "Karena terkejut, Haku memperingati Chihiro untuk segera pergi meninggalkan tempat tersebut sebelum matahari terbenam.\n"
+        )
+
     )
 
 

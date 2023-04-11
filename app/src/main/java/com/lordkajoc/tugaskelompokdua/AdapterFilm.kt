@@ -42,6 +42,11 @@ class AdapterFilm(var listFilm: ArrayList<DataFilm>, var listener: onItemClickLi
     override fun onBindViewHolder(holder: AdapterFilm.ViewHolder, position: Int) {
         //menggunakan data binding
         holder.bindFilms(listFilm[position])
+        holder.itemView.setOnClickListener{
+            val bundle = Bundle()
+            bundle.putSerializable("BUNDEL", listFilm[position])
+            Navigation.findNavController(it).navigate(R.id.action_homeFragment_to_detailFragment, bundle)
+        }
 
     }
 
