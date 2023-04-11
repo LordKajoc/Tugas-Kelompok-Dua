@@ -26,13 +26,12 @@
             android:layout_height="wrap_content"
             android:padding="10dp">
 
-            <com.google.android.material.imageview.ShapeableImageView                android:id="@+id/iv_filmimage"
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/iv_filmimage"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:layout_centerHorizontal="true"
-
-                app:imageResource="@{film.foto}"
-                />
+                app:imageResource="@{film.foto}" />
 
             <TextView
                 android:id="@+id/tv_namafilm"

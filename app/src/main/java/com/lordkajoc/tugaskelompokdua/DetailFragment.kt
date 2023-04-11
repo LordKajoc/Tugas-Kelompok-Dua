@@ -27,9 +27,7 @@ class DetailFragment : Fragment() {
         binding.tvNamafilmdetail.text = getfilm.nama
         binding.tvReleasefilmdetail.text = "Release : ${getfilm.release}"
         binding.tvRatingfilmdetail.text = "Rating : ${getfilm.rating}"
-        binding.tvSinopsisfilmdetail.text = """Sinopsis :
-           ${getfilm.sinopsis} 
-        """.trimIndent()
+        binding.tvSinopsisfilmdetail.text = "Sinopsis :${getfilm.sinopsis}"
 
     }
 }

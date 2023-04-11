@@ -14,9 +14,20 @@ import com.lordkajoc.tugaskelompokdua.databinding.CardviewListItemBinding
 class AdapterFilm(var listFilm: ArrayList<DataFilm>, var listener: onItemClickListener) :
     RecyclerView.Adapter<AdapterFilm.ViewHolder>() {
 
+    class ViewHolder(val binding : CardviewListItemBinding) : RecyclerView.ViewHolder(binding.root){
+        //menggunakan data binding disini
 
+        fun bindFilms(itemFilms: DataFilm){
+            binding.film = itemFilms
+            binding.cardView.setOnClickListener{
+                val bundle = Bundle()
+                bundle.putSerializable("BUNDEL", itemFilms)
+                Navigation.findNavController(itemView).navigate(R.id.action_homeFragment_to_detailFragment, bundle)
 
+            }
+        }
 
+    }
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -34,22 +45,6 @@ class AdapterFilm(var listFilm: ArrayList<DataFilm>, var listener: onItemClickLi
 
     }
 
-
-
-    inner class ViewHolder(val binding : CardviewListItemBinding) : RecyclerView.ViewHolder(binding.root){
-       //menggunakan data binding disini
-
-        fun bindFilms(itemFilms: DataFilm){
-            binding.film = itemFilms
-            binding.cardView.setOnClickListener{
-                val bundle = Bundle()
-                bundle.putSerializable("BUNDEL", itemFilms)
-                Navigation.findNavController(itemView).navigate(R.id.action_homeFragment_to_detailFragment, bundle)
-
-            }
-        }
-
-    }
     fun setData(list: ArrayList<DataFilm>) {
         this.listFilm.addAll(list)
     }
