@@ -13,16 +13,15 @@ import com.lordkajoc.tugaskelompokdua.databinding.CardviewListItemBinding
 
 class AdapterFilm(var listFilm: ArrayList<DataFilm>, var listener: onItemClickListener) :
     RecyclerView.Adapter<AdapterFilm.ViewHolder>() {
+    class ViewHolder(val binding: CardviewListItemBinding) : RecyclerView.ViewHolder(binding.root) {
 
-    class ViewHolder(val binding : CardviewListItemBinding) : RecyclerView.ViewHolder(binding.root){
-        //menggunakan data binding disini
-
-        fun bindFilms(itemFilms: DataFilm){
+        fun bindFilms(itemFilms: DataFilm) {
             binding.film = itemFilms
-            binding.cardView.setOnClickListener{
+            binding.cardView.setOnClickListener {
                 val bundle = Bundle()
                 bundle.putSerializable("BUNDEL", itemFilms)
-                Navigation.findNavController(itemView).navigate(R.id.action_homeFragment_to_detailFragment, bundle)
+                Navigation.findNavController(itemView)
+                    .navigate(R.id.action_homeFragment_to_detailFragment, bundle)
 
             }
         }
@@ -31,7 +30,8 @@ class AdapterFilm(var listFilm: ArrayList<DataFilm>, var listener: onItemClickLi
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        var view = CardviewListItemBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+        var view =
+            CardviewListItemBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return ViewHolder(view)
     }
 
@@ -39,13 +39,15 @@ class AdapterFilm(var listFilm: ArrayList<DataFilm>, var listener: onItemClickLi
         return listFilm.size
     }
 
+
     override fun onBindViewHolder(holder: AdapterFilm.ViewHolder, position: Int) {
         //menggunakan data binding
         holder.bindFilms(listFilm[position])
-        holder.itemView.setOnClickListener{
+        holder.itemView.setOnClickListener {
             val bundle = Bundle()
             bundle.putSerializable("BUNDEL", listFilm[position])
-            Navigation.findNavController(it).navigate(R.id.action_homeFragment_to_detailFragment, bundle)
+            Navigation.findNavController(it)
+                .navigate(R.id.action_homeFragment_to_detailFragment, bundle)
         }
 
     }
@@ -55,6 +57,9 @@ class AdapterFilm(var listFilm: ArrayList<DataFilm>, var listener: onItemClickLi
     }
 
     interface onItemClickListener {
-        fun onItemClick(nama : String)
+        fun onItemClick(nama: String)
+
     }
+
+
 }
