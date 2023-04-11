@@ -22,7 +22,7 @@ class ProfileFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         val getName = arguments?.getString("Name")
-        binding.tvTampilUsername.setText(getName)
+        binding.tvTampilUsername.text = "Halo, ${getName}"
 
         val btnLogout = binding.btnLogout
         btnLogout.setOnClickListener {
